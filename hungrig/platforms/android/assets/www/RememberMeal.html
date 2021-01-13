@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body {
+    font-family: "Times New Roman", Times, serif;
+}
+</style>
+<style>
+p { 
+    word-spacing: 2px;
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.w3-button {width:150px}
+</style>
+
+</head>
+<body class="w3-light-gray">
+<div class="topnav">
+  <a class="pasive" href="index.html">HUNGRIG</a>
+  
+</div>
+<style>
+   body            
+        {
+            background-color:   #ff6666;
+        }
+	    .topnav {
+  		overflow: hidden;
+ 	        background-color:  teal;
+		}
+		.topnav a {
+ 	     float: center;
+  	display: block;
+  	color: black;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-size: 17px;
+        font: bold 17px/17px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+}
+   p  {
+       text-align: center;
+       display: block;
+  	color: black;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	top: 35px;
+        left: 470px;
+        right: -420px;
+        bottom: -100px;
+        font: bold 36px/36px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+      }
+    input:placeholder-shown { 
+ 	      text-align: center;
+               width: 430px;
+               height: 50px;
+               padding: 10px 10px;
+                font-size:50px;
+              font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+              border-style: groove ;
+              background: white;
+              border-radius: 3px 3px 3px 3px;  
+               position:relative;
+   	       transition: .5s ease;
+		top: 35px;
+   		 left: 250px;
+    		right: -420px;
+    		bottom: -100px;
+             }
+     button {
+	            overflow: visible;
+    	            position:relative;
+   	            transition: .5s ease;
+		    top: 50px;
+   		 left: 250px;
+    		right: -420px;
+    		bottom: -200px;
+            
+   		   margin : 4px 4px ;
+                   border: 0;
+   	           padding:0;
+    	           cursor: pointer;
+    	    	height: 50px;
+    		width: 150px;
+    		font: bold 12px/12px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+    		color: black;
+    
+    		background: #ccffe6;
+    		border-radius: 3px 3px 3px 3px;     
+    		text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+                    }
+        
+}
+</style>
+
+<p>Leave a meal you want us to notify you about:</p>
+<input id="search" placeholder="Type a Meal"/>
+
+<div id="result"></div>
+
+<button class="w3-btn w3-border w3-black w3-hover-grey "  onclick="myFunction()">Submit</button>
+
+<button class="w3-btn w3-border w3-black w3-hover-grey" onclick="goBack()">Go Back<i class=" w3-xlarge w3-margin-left fa fa-home"></i></button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+
+
+<script>
+
+function myFunction(){ 
+var check = document.getElementById("search").value;
+if (typeof(Storage) !== "undefined") {
+   localStorage.mealToRemember=check;
+   document.getElementById("result").innerHTML = "We have remembered your meal.";
+} else {
+    document.getElementById("result").innerHTML = "Error";
+}
+
+}
+</script>
+
+
+
+</body>
+</html>

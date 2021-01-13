@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+html, body {
+    font-family: "Times New Roman", Times, serif;
+}
+</style>
+</head>
+
+<button class="w3-btn w3-border w3-black w3-hover-grey " onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+<script>
+
+var summe=0;
+var summ=Number(localStorage.counting);	
+var i=Number(localStorage.counting)+1;
+	for( i;summ>=0;--summ){ 
+     
+	summe=(summe*10+Number(localStorage.getItem(summ)*10))/10;
+    
+ }
+ 
+ document.write("<center><h1>You have spent "+" "+ summe+ " "+ "Euros!<h1></center>");
+</script>
+    
+  
+
+
+
+
+</body>
+</html>

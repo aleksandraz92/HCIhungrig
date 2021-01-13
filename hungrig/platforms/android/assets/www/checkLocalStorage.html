@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+html, body {
+    font-family: "Times New Roman", Times, serif;
+}
+</style>
+</head>
+<body>
+<div class="topnav">
+  <a class="pasive" href="index.html">HUNGRIG</a>
+  
+</div>
+<style>
+   body            
+        {
+            background-color:   light-grey;
+        }
+	.topnav {
+  		overflow: hidden;
+ 	        background-color:  teal;
+		}
+		.topnav a {
+ 	     float: center;
+  	display: block;
+  	color: #f2f2f2;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-size: 17px;
+        font: bold 17px/17px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+}
+  
+    
+     button {
+	            overflow: visible;
+    	            position:relative;
+   	            transition: .5s ease;
+		    top: 300px;
+                    left: 150px;
+    		    right: -420px;
+    		    bottom: -300px;
+            
+   		    margin : 4px 4px ;
+                    border: 0;
+   	            padding:0;
+    	            cursor: pointer;
+    	    	    height: 50px;
+    		    width: 150px;
+    		    font: bold 12px/12px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+    		    color: black;
+    
+    		   background: #ccffe6;
+    		   border-radius: 3px 3px 3px 3px;     
+    		   text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+                    }
+					
+		button1 {
+	            overflow: visible;
+    	            position:relative;
+   	            transition: .5s ease;
+		    top: 300px;
+                    left: 350px;
+    		    right: -420px;
+    		    bottom: -300px;
+            
+   		    margin : 4px 4px ;
+                    border: 0;
+   	            padding:0;
+    	            cursor: pointer;
+    	    	    height: 50px;
+    		    width: 180px;
+    		    font: bold 12px/12px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+    		    color: black;
+    
+    		   background: teal;
+    		   border-radius: 3px 3px 3px 3px;     
+    		   text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+                    }			
+					
+</style>
+<div id="result"></div>
+
+<button class="w3-btn w3-border w3-black w3-hover-grey " onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+<script>
+
+ 
+
+if (typeof(Storage) !== "undefined") {
+   
+    var summe=0;
+	var summ=Number(localStorage.counting);	
+	var i=Number(localStorage.counting)+1;
+	for( i;summ>=0;--summ){ 
+    
+    document.write("<br>"); 
+	document.write((i--)+". Day: "+ " " + localStorage.getItem(summ)+" "+"Euros"+" " ); 
+    document.write("<br>");  
+	summe=(summe*10+Number(localStorage.getItem(summ)*10))/10;
+    
+ }
+} else {
+    document.getElementById("result").innerHTML = "Error";
+}
+
+
+
+</script>
+<button class="button button1" class="w3-btn w3-border w3-black w3-hover-grey " onclick="calcExpenses()">Calculate total amount of expenses!</button>
+<script>
+function calcExpenses() {
+    window.location.assign("calcTotal.html")
+}
+</script>
+
+
+
+</body>
+</html>

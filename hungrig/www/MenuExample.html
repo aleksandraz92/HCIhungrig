@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+html, body {
+    font-family: "Times New Roman", Times, serif;
+}
+</style>
+</head>
+<body>
+<div class="topnav">
+  <a class="pasive" href="index.html">HUNGRIG</a>
+  
+</div>
+<style>
+   body            
+        {
+            background-color:   light-grey;
+        }
+	.topnav {
+  		overflow: hidden;
+ 	        background-color:  teal;
+		}
+		.topnav a {
+ 	     float: center;
+  	display: block;
+  	color: #f2f2f2;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-size: 17px;
+        font: bold 17px/17px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+}
+   p  {
+       text-align: center;
+       display: block;
+  	color: black;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	
+        font: bold 36px/36px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+      }
+    input:placeholder-shown { 
+ 	      text-align: center;
+               width: 430px;
+               height: 50px;
+               padding: 10px 10px;
+                font-size:50px;
+              font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+              border-style: groove ;
+              background: white;
+              border-radius: 3px 3px 3px 3px;  
+               position:relative;
+   	            transition: .5s ease;
+		    top: 35px;
+   		 left: 250px;
+    		right: -420px;
+    		bottom: -100px;
+             }
+     button {
+	            overflow: visible;
+    	            position:relative;
+   	            transition: .5s ease;
+		    top: 35px;
+   		 left: 250px;
+    		right: -420px;
+    		bottom: -100px;
+            
+   		   margin : 4px 4px ;
+                   border: 0;
+   	           padding:0;
+    	           cursor: pointer;
+    	    	height: 50px;
+    		width: 150px;
+    		font: bold 12px/12px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+    		color: black;
+    
+    		background: #ccffe6;
+    		border-radius: 3px 3px 3px 3px;     
+    		text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+                    }
+ 
+</style>
+<p>Search for a meal:</p>
+
+
+
+
+<script>
+var adress="Universitaetsstraße 7";
+var adress2="Waehringer Strasse 19"
+var adress3="Tuerkenstraße 3"
+var adress4="Universitaetsring 10"
+var menu = {vorspeise:"Broccolicremesuppe", hauptspeise:"Wiener Schnitzel", salat:"Gruene Salat", preis: "5.90 Euro"};
+var menu2 = {vorspeise:"Springrolls", hauptspeise:"Fisch", salat:"Erdaepfelsalat", preis: "4.90 Euro"};
+var menu3 = {vorspeise:"Steinpilzcremesuppe", hauptspeise:"Gebackene Putenstreifen mit Basmatireis", salat:"Gurken", preis: "6.90 Euro"};
+var menu4 = {vorspeise:"Fruehlingssuppe", hauptspeise:"Rindsgulasch", salat:"Grichische Salat", preis: "5.50 Euro"};
+var restaurant= {name:"Nig", menu: menu,adresse:adress};
+var restaurant2={name:"Mitendrin", menu: menu2,adresse:adress2};
+var restaurant3= {name:"AAI Mensa", menu: menu3,adresse:adress3};
+var restaurant4= {name:"3Raum", menu: menu4,adresse:adress4};
+
+</script>
+
+<script>
+function myFunction(){ 
+
+
+var check = document.getElementById("search").value;
+
+if(restaurant.menu.vorspeise.toUpperCase()==check.toUpperCase()|| restaurant.menu.hauptspeise.toUpperCase()==check.toUpperCase()||restaurant.menu.salat.toUpperCase()==check.toUpperCase()) { 
+document.getElementById("1").innerHTML ="RESTAURANT: "+ restaurant.name +"<br>  "+ "MENU: "+ "[ " + menu.vorspeise+","+menu.hauptspeise+","+menu.salat + ","+menu.preis + "  ]";
+document.getElementById("2").innerHTML = restaurant.adresse;
+
+}
+else if(restaurant2.menu.vorspeise.toUpperCase()==check.toUpperCase()|| restaurant2.menu.hauptspeise.toUpperCase()==check.toUpperCase()||restaurant2.menu.salat.toUpperCase()==check.toUpperCase()){ 
+
+document.getElementById("1").innerHTML ="RESTAURANT: "+ restaurant2.name +" <br> "+ "MENU: "+ "[ " + menu2.vorspeise+","+menu2.hauptspeise+","+menu2.salat + ","+menu2.preis + "  ]";
+document.getElementById("2").innerHTML = restaurant2.adresse;
+}
+else if(restaurant3.menu.vorspeise.toUpperCase()==check.toUpperCase()|| restaurant3.menu.hauptspeise.toUpperCase()==check.toUpperCase()||restaurant3.menu.salat.toUpperCase()==check.toUpperCase()){ 
+
+document.getElementById("1").innerHTML ="RESTAURANT: "+ restaurant3.name +"<br>  "+ "MENU: "+ "[ " + menu3.vorspeise+","+menu3.hauptspeise+","+menu3.salat + ","+menu3.preis + "  ]";
+document.getElementById("2").innerHTML = restaurant3.adresse;
+
+}
+else if(restaurant4.menu.vorspeise.toUpperCase()==check.toUpperCase()|| restaurant4.menu.hauptspeise.toUpperCase()==check.toUpperCase()||restaurant4.menu.salat.toUpperCase()==check.toUpperCase()){ 
+
+document.getElementById("1").innerHTML ="RESTAURANT: "+ restaurant4.name +"<br>  "+ "MENU: "+ "[ " + menu4.vorspeise+","+menu4.hauptspeise+","+menu4.salat + ","+menu4.preis + "  ]";
+document.getElementById("2").innerHTML = restaurant4.adresse;
+}
+}
+
+function alertUser(){
+
+var bool=false;
+
+var array=[restaurant,restaurant2,restaurant3,restaurant4];
+var len=array.length;
+for(var i=0;i<=len;i++){
+   
+   if(array[i].menu.vorspeise==localStorage.mealToRemember){
+           
+           alert("There is "+" "+localStorage.mealToRemember+" "+"again in"+" "+array[i].name+"!"+" "+ ":)");
+           bool = true;
+		   
+   }
+   
+
+}
+          if (bool==false){
+              alert("Nothing new :(");
+             }
+
+}
+
+
+</script>
+
+<input id="search" placeholder="Meal"/>
+<p id="1"></p>
+<p id="2"></p>
+<button class="w3-btn w3-border w3-black w3-hover-grey "   onclick="myFunction()">Search!</button>
+<button class="w3-btn w3-border w3-black w3-hover-grey "   onclick="alertUser()">Check News</button>
+
+
+<button class="w3-btn w3-border w3-black w3-hover-grey "  onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>

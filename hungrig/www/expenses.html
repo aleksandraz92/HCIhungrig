@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html, body {
+    font-family: "Times New Roman", Times, serif;
+}
+</style>
+<style>
+p { 
+    word-spacing: 2px;
+}
+</style>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+<div class="topnav">
+  <a class="pasive" href="index.html">HUNGRIG</a>
+  
+</div>
+<style>
+   body            
+        {
+            background-color:   light-grey;
+        }
+	.topnav {
+  		overflow: hidden;
+ 	        background-color:  teal;
+		}
+		.topnav a {
+ 	     float: center;
+  	display: block;
+  	color: #f2f2f2;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-size: 17px;
+        font: bold 17px/17px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+}
+   p  {
+       text-align: center;
+       display: block;
+  	color: black;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	
+        font: bold 16px/16px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+      }
+    input:placeholder-shown { 
+ 	      text-align: center;
+               width: 430px;
+               height: 50px;
+               padding: 10px 10px;
+                font-size:50px;
+              font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+              border-style: groove ;
+              background: white;
+              border-radius: 3px 3px 3px 3px;  
+               position:relative;
+   	            transition: .5s ease;
+		    top: 35px;
+   		 left: 250px;
+    		right: -420px;
+    		bottom: -100px;
+             }
+     button {
+	            overflow: visible;
+    	            position:relative;
+   	            transition: .5s ease;
+		    top: 35px;
+   		 left: 250px;
+    		right: -420px;
+    		bottom: -100px;
+            
+   		   margin : 4px 4px ;
+                   border: 0;
+   	           padding:0;
+    	           cursor: pointer;
+    	    	height: 50px;
+    		width: 150px;
+    		font: bold 12px/12px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+    		color: black;
+    
+    		background: #ccffe6;
+    		border-radius: 3px 3px 3px 3px;     
+    		text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+                    }
+</style>
+
+<p>Here you can write down the price you paid for your meal today:</p>
+<p>Please use '.' instead of ',' for decimal values.</p>
+<p>How much did you spend today?</p>
+<input id="search" placeholder="The Price"/>
+<p id="1"></p>
+<div id="result"></div>
+
+<button class="w3-btn w3-border w3-black w3-hover-grey " type="button" onclick="myFunction()">Save!</button>
+<button class="w3-btn w3-border w3-black w3-hover-grey " type="button"  onclick="seeExp()"> See expenses </button>
+
+<script>
+function seeExp() {
+    window.location.assign("checkLocalStorage.html")
+}
+</script>
+
+<button class="w3-btn w3-border w3-black w3-hover-grey " onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+
+<script>
+
+function myFunction(){ 
+var check = document.getElementById("search").value;
+if(!isNaN(check)){
+if (typeof(Storage) !== "undefined") {
+    if (localStorage.counting) {
+            localStorage.counting = Number(localStorage.counting)+1;
+			
+        } else {
+            localStorage.counting = 0;
+        }
+    var count=Number(localStorage.counting);	
+    localStorage.setItem(count++,check);
+	// set in storage also the counter// to delete provide delete input and input the number 
+    
+    document.getElementById("result").innerHTML = "It is saved.";
+} else {
+    document.getElementById("result").innerHTML = "Error";
+	}
+}
+else{
+document.getElementById("result").innerHTML = "Not a valid number.Try again";
+}
+}
+</script>
+
+
+
+
+</body>
+</html>

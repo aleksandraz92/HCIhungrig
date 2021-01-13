@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.w3-btn {width:200px}
+</style>
+<style>
+html, body {
+    font-family: "Times New Roman", Times, serif;
+}
+</style>
+</head>
+<body>
+ <div class="topnav">
+  <a class="pasive" href="#home">HUNGRIG</a>
+  
+</div>
+<style>
+  body            
+                    {
+                       background-color:  light-grey;
+                    }
+                 .topnav {
+  		overflow: hidden;
+ 	        background-color:  teal;
+		}
+		.topnav a {
+ 	     float: center;
+  	display: block;
+  	color: black;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-size: 17px;
+        font: bold 12px/12px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+}
+                   
+                    img {
+                        max-width: 100%;
+                        height: 900px;
+                        margin: auto;
+                        display: block;
+                    }
+
+                button {
+	            overflow: visible;
+    	            position:relative;
+   	            transition: .5s ease;
+		    top: 35px;
+   		 left:70px;
+    		right: -320px;
+    		bottom: -100px;
+            
+   		   margin : 4px 4px ;
+                   border: 0;
+   	           padding:0;
+    	           cursor: pointer;
+    	    	height: 50px;
+    		width: 150px;
+    		font: bold 12px/12px 'lucida sans', 'trebuchet MS', 			'Tahoma';
+    		color: black;
+    
+    		background: #d83c3c;
+    		border-radius: 3px 3px 3px 3px;     
+    		text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+                    }
+
+                   
+                    }
+</style>
+
+<img src="speise.jpeg" alt="speise">
+
+<div id="result"></div>
+
+<button class="w3-btn w3-border w3-black w3-hover-grey "  onclick="RestaurantSearch()"> Search by Restaurant<i class=" w3-large w3-margin-left fa fa-search"></i></button>
+
+
+<script>
+function RestaurantSearch() {
+    window.location.assign("Restaurant.html")
+}
+</script>
+<button  class="w3-btn w3-border w3-black w3-hover-grey " onclick="mealSearch()"> Search by Meal<i class=" w3-large w3-margin-left fa fa-search"></i></button>
+
+<script>
+function mealSearch() {
+    window.location.assign("MenuExample.html")
+}
+</script>
+
+<button  class="w3-btn w3-border w3-black w3-hover-grey " onclick="expenseSearch()"> Expences </button>
+
+
+<script>
+function expenseSearch() {
+    window.location.assign("expenses.html")
+}
+</script>
+
+<button  class="w3-btn w3-border w3-black w3-hover-grey " onclick="mealRemember()"> Remember Meal<i class=" w3-large w3-margin-left fa fa-cloud"></i> </button>
+
+
+
+<script>
+function mealRemember() {
+    window.location.assign("RememberMeal.html")
+}
+</script>
+
+
+
+
+</body>
+</html>
